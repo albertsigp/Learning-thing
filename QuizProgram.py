@@ -1,49 +1,60 @@
-import time
-from tkinter import *
-from abc import ABC, abstractmethod
-from tkinter.font import Font
+import tkinter as tk
+from tkinter import messagebox
 
-def calc ():
-    global operation_var
-    try:
-        number1 = int(entry1.get())
-        number2 = int(entry2.get())
-        operation = operation_var.get()
+# Data:
+questions = ["What is the capital of France?", "What is 2 + 2?"]
+choices = [["Paris", "London", "Berlin"], ["3", "4", "5"]]
+answers = ["Paris", "4"]
 
-        if operation == 'Add':
-            result = number1 + number2
-        elif operation == 'Subtract':
-            result = number1 - number2
-        elif operation == 'Multiply':
-            result = number1 * number2
-        else:
-            result = 'Invalid Operation'
+# Current question index
+current_question = 0
 
-        result_label.config(text=f"Result: {result}")
-    except ValueError:
-        result_label.config(text="Please enter valid numbers")
+# Check if answer correct or wrong:
+def check_answer():
+    global current_question
+    if var.get() == answers[current_question]:
+        messagebox.showinfo("Correct!", "Your answer is correct!")
+    else:
+        messagebox.showerror("Incorrect!", "Sorry, that's not correct.")
+    current_question += 1
+    if current_question < len(questions):
+        display_question()
+    else:
+        messagebox.showinfo("End", "The quiz is over!")
+
+# Display the next question:
+def display_question():
+    question_label.config(text=questions[current_question])
+    for i in range(len(choices[current_question])):
+        radio_buttons[i].config(text=choices[current_question][i])
+        radio_buttons[i].deselect()
+    var.set(None)
 
 
-
-
-
-root = Tk()
+root = tk.Tk()
+root.title("Quiz App")
 root.geometry('1000x600')
-titleFont = Font(family='Helvetica', size=20)
 
-entry1 = Entry(root)
-entry1.place(x=450,y=200)
 
-entry2 = Entry(root)
-entry2.place(x=450,y=250)
+var = tk.StringVar(value=None)
 
-startbutton = Button(root, text='Start', bd='10')
-startbutton.place(x=500,y=100)
+# Create a label for displaying questions
+question_label = tk.Label(root, text="", font=("Arial", 14))
+question_label.pack(pady=20)
 
-root.title("Matematik tingyting")
+# Create buttons for choices:
+radio_buttons = []
+for _ in range(3):
+    radio_button = tk.Radiobutton(root, text="", variable=var, font=("Arial", 12), value="")
+    radio_button.pack(anchor='w')
+    radio_buttons.append(radio_button)
 
-# Create a Label widget with some text
-label = Label(root, text="Matematik Program", font=titleFont)
-label.place(x=400,y=0)
+# Create a submit button
+submit_button = tk.Button(root, text="Submit", command=check_answer)
+submit_button.pack(pady=20)
 
+# Display the first question
+display_question()
+
+# Loop so it doesnt crash instantly:
 root.mainloop()
