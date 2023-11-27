@@ -66,6 +66,8 @@ Herefter kan man klikke submit, hvorefter programmet fortæller dig om dit svar 
 |Kør program | Program kører | Program kører|
 |Svar spørsmål korrekt | print: "Spørgsmål korrekt" og skift til næste |print: "Spørgsmål korrekt" og skift til næste|
 |Svar spørgmål forkert | print: "Spørgsmål forkert" og skift til næste |print: "Spørgsmål forkert" og skift til næste|
+|Tryk på sluk knappen | Programmet slukker| Programmet slukker|
+|Bliv færdig med quizzen|print "the quiz is over" og sluk quiz | printer: "the quiz is over" og slukker ikke|
 
 
 For at teste programmet har jeg også svaret rigtigt og forkert på spørgsmålene:
