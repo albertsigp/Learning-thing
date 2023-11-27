@@ -17,8 +17,29 @@ Jeg har hovedsageligt brugt 2 designmønstre:
 
 #### Procedural programming:
 Definition fra wikipedia: Koden følger en procedureorienteret tilgang, hvor data og funktionalitet er struktureret omkring procedurer eller funktioner snarere end objekter.   
-Dette er brugt i min kode:
+I min kode anvender jeg definerede funktioner såsom check_answer() og display_question(). Disse funktioner udfører specifikke opgaver, og de kaldes i en bestemt rækkefølge. Som derfor følger en procedure:
+```python
+def check_answer():
+    global current_question
+    if var.get() == answers[current_question]:
+        messagebox.showinfo("Correct!", "Your answer is correct!")
+    else:
+        messagebox.showerror("Incorrect!", "Sorry, that's not correct.")
+    current_question += 1
+    if current_question < len(questions):
+        display_question()
+    else:
+        messagebox.showinfo("End", "The quiz is over!")
 
+# Display the next question:
+def display_question():
+    question_label.config(text=questions[current_question])
+    for i in range(len(choices[current_question])):
+        radio_buttons[i].config(text=choices[current_question][i], value=choices[current_question][i])
+        radio_buttons[i].deselect()
+    var.set(None)
+
+```
 
 #### Modularity:
 Definition fra wikipedia: Modular design is based on the idea of dividing a complex system into smaller and simpler units, called modules.   
