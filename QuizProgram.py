@@ -26,14 +26,14 @@ def check_answer():
 def display_question():
     question_label.config(text=questions[current_question])
     for i in range(len(choices[current_question])):
-        radio_buttons[i].config(text=choices[current_question][i])
+        radio_buttons[i].config(text=choices[current_question][i], value=choices[current_question][i])
         radio_buttons[i].deselect()
     var.set(None)
 
 
 root = tk.Tk()
 root.title("Quiz App")
-root.geometry('1000x600')
+root.geometry('600x400')
 
 
 var = tk.StringVar(value=None)
