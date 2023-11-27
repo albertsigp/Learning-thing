@@ -21,11 +21,21 @@ Dette er brugt i min kode:
 
 #### Modularity:
 Definition fra wikipedia: Modular design is based on the idea of dividing a complex system into smaller and simpler units, called modules.   
-Jeg har ikke direkte brugt dette design pattern, men jeg har taget inspiration, fx 
+Jeg har ikke direkte brugt dette design pattern, men jeg har taget inspiration, fx bruger jeg det i min "check_answer" funktion:
 ```python
-if var.get() == answers[current_question]:
+def check_answer():
+    global current_question
+    if var.get() == answers[current_question]:
+        messagebox.showinfo("Correct!", "Your answer is correct!")
+    else:
+        messagebox.showerror("Incorrect!", "Sorry, that's not correct.")
+    current_question += 1
+    if current_question < len(questions):
+        display_question() # <-----
+    else:
+        messagebox.showinfo("End", "The quiz is over!")
 ```
-
+Her bruger jeg funktionen "display_question()", (foran <-----), til at delegere noget af funktionens arbejde til en anden funktion jeg har lavet specifikt til dette. 
 
 ### Beskrivelse af udviklingsprocessen:
 
