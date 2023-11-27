@@ -14,7 +14,7 @@ Målgruppen er folk i udskolingen. Dvs en alder på 14-17, spørgsmålene er ogs
 
 ### Beskrivelse af udviklingsprocessen:
 
-
+Jeg startede med at brainstorme hvilken slags lærings program jeg ville skrive. Da jeg var kommet frem til en ide fandt jeg designmønstre der ville hjælpe mig med at udføre den. Og herefter skrev jeg koden.
 
 
 ### Beskrivelse af brugergrænsefladen:
