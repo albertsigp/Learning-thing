@@ -61,7 +61,14 @@ Herefter kan man klikke submit, hvorefter programmet fortæller dig om dit svar 
 
 
 ### Test af program:
-For at teste programmet har jeg bare svaret rigtigt og forkert på spørgsmålene:
+| Input | Forventet output | Faktisk output |
+| ----------- | ----------- | ----------- |
+|Kør program | Program kører | Program kører|
+|Svar spørsmål korrekt | print: "Spørgsmål korrekt" og skift til næste |print: "Spørgsmål korrekt" og skift til næste|
+|Svar spørgmål forkert | print: "Spørgsmål forkert" og skift til næste |print: "Spørgsmål forkert" og skift til næste|
+
+
+For at teste programmet har jeg også svaret rigtigt og forkert på spørgsmålene:
 
 ![billede](https://github.com/albertsigp/Learning-thing/assets/32582639/32111d31-9846-4b62-87be-972ca9ff4d28)
 
