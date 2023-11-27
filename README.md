@@ -9,7 +9,7 @@ Formålet er at forstærke viden fra hele ens skolegang, derfor er der mange nic
 
 ### Målgruppe:
 
-Målgruppen er folk i udskolingen. Dvs en alder på 14-17, spørgsmålene er også indrettet derefter.
+Målgruppen er folk i udskolingen. Dvs en alder på 14-17, spørgsmålene er også indrettet derefter. Da det hovedsageligt er denne aldersgruppe der ville have brug for at opfriske den viden quizzen tilbyder.
 
 ### Designmønstre:
 
