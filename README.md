@@ -12,6 +12,21 @@ Målgruppen er folk i udskolingen. Dvs en alder på 14-17, spørgsmålene er ogs
 
 ### Designmønstre:
 
+Jeg har hovedsageligt brugt 2 designmønstre:
+
+#### Procedural programming:
+Definition fra wikipedia: Koden følger en procedureorienteret tilgang, hvor data og funktionalitet er struktureret omkring procedurer eller funktioner snarere end objekter.   
+Dette er brugt i min kode:
+
+
+#### Modularity:
+Definition fra wikipedia: Modular design is based on the idea of dividing a complex system into smaller and simpler units, called modules.   
+Jeg har ikke direkte brugt dette design pattern, men jeg har taget inspiration, fx 
+```python
+if var.get() == answers[current_question]:
+```
+
+
 ### Beskrivelse af udviklingsprocessen:
 
 Jeg startede med at brainstorme hvilken slags lærings program jeg ville skrive. Da jeg var kommet frem til en ide fandt jeg designmønstre der ville hjælpe mig med at udføre den. Og herefter skrev jeg koden.
