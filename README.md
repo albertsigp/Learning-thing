@@ -1,6 +1,7 @@
 # Lærings program
 
-Et quiz program lavet til programmering B. Det er et quiz program der lærer dig generel viden om verden. Alt fra geografi til matematik.
+Et quiz program lavet til en aflevering i programmering B.   
+Det er et quiz program der lærer dig generel viden om verden. Alt fra geografi til matematik.
 
 ### Formål:
 
